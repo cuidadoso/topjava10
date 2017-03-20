@@ -1,33 +1,20 @@
 package ru.javawebinar.topjava.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 import java.time.LocalDateTime;
 
 /**
  * GKislin
  * 11.01.2015.
  */
+@AllArgsConstructor
 public class UserMeal {
+    @Getter
     private final LocalDateTime dateTime;
-
+    @Getter
     private final String description;
-
+    @Getter
     private final int calories;
-
-    public UserMeal(LocalDateTime dateTime, String description, int calories) {
-        this.dateTime = dateTime;
-        this.description = description;
-        this.calories = calories;
-    }
-
-    public LocalDateTime getDateTime() {
-        return dateTime;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public int getCalories() {
-        return calories;
-    }
 }
