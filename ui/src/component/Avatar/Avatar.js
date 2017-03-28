@@ -6,6 +6,18 @@ import ReactImageFallback from "react-image-fallback";
 import './Avatar.css';
 
 class Avatar extends Component {
+    static propType = {
+        children:   pt.string,
+        src:        pt.string.isRequired,
+        fallback:   pt.string.isRequired,
+        initial:    pt.string.isRequired,
+        alt:        pt.string,
+        className:  pt.string,
+    };
+    static defaultProps = {
+        className: 'avatar-image',
+    };
+
     render() {
         return (
             <div>
@@ -23,12 +35,6 @@ class Avatar extends Component {
 
 Avatar.displayName = 'Avatar';
 Avatar.propTypes = {
-    children:   pt.string,
-    src:        pt.string.isRequired,
-    fallback:   pt.string.isRequired,
-    initial:    pt.string.isRequired,
-    alt:        pt.string,
-    className:  pt.string,
 };
 Avatar.defaultProps = {
     className: 'avatar-image',

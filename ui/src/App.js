@@ -1,8 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes as pt } from 'react';
+import {Router, useRouterHistory} from 'react-router';
+
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+    static propTypes = {
+        routes: pt.object.isRequired,
+    };
+    static displayName = 'Topjava10App';
+
+
   render() {
     return (
       <div className="App">
