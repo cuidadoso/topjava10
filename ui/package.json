@@ -37,6 +37,6 @@
     "build-storybook": "build-storybook -s public",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "start-server": "node server.js topjava10"
+    "start-server": "node server.js topjava"
   }
 }
