@@ -38,4 +38,9 @@
         <servlet-name>IndexServlet</servlet-name>
         <url-pattern>/ui/*</url-pattern>
     </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>ui</welcome-file>
+    </welcome-file-list>
+
 </web-app>
