@@ -1,7 +1,6 @@
 .idea
 out
 target
-node_modules
 *.iml
-log
+*.log
 *.patch
