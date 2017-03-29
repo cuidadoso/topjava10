@@ -25,4 +25,17 @@
         <url-pattern>/meals</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>com.ssc.cdt.servlet.CdtReactIndexServlet</servlet-class>
+        <init-param>
+            <param-name>menuData</param-name>
+            <param-value>__request=900&amp;__action=5</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/ui/*</url-pattern>
+    </servlet-mapping>
 </web-app>
