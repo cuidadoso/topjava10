@@ -35,4 +35,9 @@ public class MealServiceImpl implements MealService {
     public Collection<Meal> getAll(int userId) {
         return repository.getAll(userId);
     }
+
+    @Override
+    public void update(Meal meal, int userId) {
+        repository.save(meal, userId);
+    }
 }
