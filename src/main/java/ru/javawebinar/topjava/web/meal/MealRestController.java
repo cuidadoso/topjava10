@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.service.MealService;
+import ru.javawebinar.topjava.to.MealWithExceed;
+import ru.javawebinar.topjava.util.MealsUtil;
 
 import java.util.Collection;
 
@@ -19,9 +21,9 @@ public class MealRestController {
     @Autowired
     private MealService service;
 
-    public Collection<Meal> getAll(int userId) {
+    public Collection<MealWithExceed> getAll(int userId) {
         LOG.info("getAll");
-        return service.getAll(userId);
+        return MealsUtil.getWithExceeded(service.getAll(userId), MealsUtil.DEFAULT_CALORIES_PER_DAY);
     }
 
     public Meal get(int id, int userId) {

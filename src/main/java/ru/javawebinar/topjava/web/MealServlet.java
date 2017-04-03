@@ -79,8 +79,7 @@ public class MealServlet extends HttpServlet {
             case "all":
             default:
                 LOG.info("getAll");
-                request.setAttribute("meals",
-                        MealsUtil.getWithExceeded(mealRestController.getAll(userId), MealsUtil.DEFAULT_CALORIES_PER_DAY));
+                request.setAttribute("meals", mealRestController.getAll(userId));
                 request.getRequestDispatcher("/meals.jsp").forward(request, response);
                 break;
         }
